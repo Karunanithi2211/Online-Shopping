@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" th:href=@{/css/LoginRegister.css}>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/js/LoginRegister.js"></script>
+    <link rel="icon" type="image/x-icon" th:href="@{/Images/favicon.png}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="register-body">
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a th:href="@{/nivak/cars/}"><img src="/Images/favicon.png" alt="logo" class="logo"></a>
+            <div class="left-content">
+                <a th:href="@{/nivak/cars/login}">Login</a>
+                <a th:href="@{/nivak/cars/register}" class="active">Register</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+          </div>
+    </nav>
+    <div class="register">
+        <form th:action=@{/nivak/cars/registered} method="post">
+            <center><h1>Register</h1></center>
+            <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+            <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+
+            <input type="number" name="age" id="age" placeholder="Age" class="age" required>
+
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <div th:if="${param.eae}" class="messages"><center> Oops! Email already exists <a th:href="@{/nivak/cars/login}" style="text-decoration: none;">Login</a></center></div>
+
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <center><p class="pwdmessage" id="pswdmessage" style="display: none;"></p></center>
+
+            <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required>
+
+            <button type="submit" id="myButton">Register</button>
+            <br>
+            <br>
+            <br>
+            <center><p id="message" style="display: none;"></p></center>
+        </form>
+    </div>
+</body>
+</html>

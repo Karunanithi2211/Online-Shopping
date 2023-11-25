@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+    background-image: url("../Images/bghome.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.content{
+    position: relative;
+    left: 50px;
+    top: 10%;
+    width: 350px;
+    height: 500px;
+    background-color: transparent;
+}
+.continue{
+    position: relative;
+    width: 50%;
+    height: 40px;
+    top: -150px;
+    left: 25%;
+    background-color: transparent;
+    border-radius: 15px;
+    border: none;
+}
+
+.continue a{
+    text-decoration: none;
+    color: red;
+    width: 100%;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.continue a:after {
+    content: '\00bb';
+    position: relative;
+    color: green;
+    opacity: 0;
+    top: 0;
+    font-size: large;
+    left: 10px;
+}
+  
+.continue:hover a {
+    padding-right: 10px;
+    color: green;
+}
+
+  
+.continue:hover a:after {
+    opacity: 1;
+}
+
+
+.centered-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-text img, .centered-text h1, .centered-text p,.centered-text q{
+    position: relative;
+    text-align: center;
+}
+.centered-text img{
+    top: -90px;
+    width: 350px;
+}
+.centered-text q{
+    color: yellow;
+}
+.centered-text p,q{
+    top: -200px;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+}
+.centered-text h1{
+    color: greenyellow;
+}
+.centered-text p span{
+    color: greenyellow;
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 0px 5px 3px 5px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" th:href=@{/css/LoginRegister.css}>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/js/LoginRegister.js"></script>
+    <link rel="icon" type="image/x-icon" th:href="@{/Images/favicon.png}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a th:href="@{/nivak/cars/}"><img src="/Images/favicon.png" alt="logo" class="logo"></a>
+            <div class="left-content">
+                <a th:href="@{/nivak/cars/login}" class="active">Login</a>
+                <a th:href="@{/nivak/cars/register}">Register</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        </div>
+    </nav>
+    <div class="login">
+        <form th:action=@{/nivak/cars/logined} method="post">
+            <center><h1>Login</h1></center>
+            <input type="email" name="logemail" id="logemail" placeholder="Email" required><div th:if="${param.unf}" class="messages"><center>*User Not Found <a th:href="@{/nivak/cars/register}" style="text-decoration: none;">Register</a></center></div><br>
+            <input type="password" name="logpassword" id="logpassword" placeholder="Password" required><div th:if="${param.pic}" class="messages"><center>Incorrect Password</center></div><br>
+            <button type="submit">Login</button>
+        </form>
+        <center>
+            <div class="alert-message">
+                <div th:if="${param.logout}" class="alert"><center>Successfully Logged out</center></div>
+                <div th:if="${param.reged}" class="alert"><center>Successfully Registered</center></div>
+                <div th:if="${param.reg}" class="alert"><center>Check Your Email to Verify</center></div>
+                <div th:if="${param.eav}" class="alert"><center>Email Already Verified just Login</center></div>
+                <div th:if="${param.env}" class="alert"><center>Email Not Verified yet</center></div>
+                <div th:if="${param.lif}" class="alert"><center>LogIn first</center></div>
+            </div> 
+        </center>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+.cards .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    height: 350px;
+    overflow-x: scroll;
+    text-align: center;
+    font-family: arial;
+}
+  
+.cards .price {
+    color: grey;
+    font-size: 22px;
+}
+  
+.cards .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+  
+.cards .card button:hover {
+    opacity: 0.7;
+}
+
+.row {
+    margin: 10px -16px;
+    height: 85vh;
+    overflow: scroll;
+}
+
+
+.row,
+.row > .column {
+    padding: 8px;
+}
+  
+.column {
+    float: left;
+    display: none;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.show {
+    display: block;
+}
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: rgba(255, 255, 255, 0.621);
+    cursor: pointer;
+}
+  
+.btn:hover {
+    background-color: #ddd;
+}
+  
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+input[type=text] {
+    width: 150px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    outline:none;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('search.png');
+    background-position: 10px 7px; 
+    background-repeat: no-repeat;
+    background-size: 21px;
+    padding: 7px 20px 7px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+  
+input[type=text]:focus {
+    width: 50%;
+}

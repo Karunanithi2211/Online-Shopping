@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
+
+body{
+  padding: 0; 
+  margin: 0;
+  overflow: hidden;
+  background-color: rgb(194, 194, 194);
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
